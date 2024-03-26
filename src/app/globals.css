@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 207 95% 8%;
+    --foreground: 201 83% 81%;
+    --muted: 207 12% 15%;
+    --muted-foreground: 207 12% 65%;
+    --popover: 207 95% 5%;
+    --popover-foreground: 201 83% 91%;
+    --card: 207 95% 6%;
+    --card-foreground: 201 83% 86%;
+    --border: 207 85% 13%;
+    --input: 207 85% 16%;
+    --primary: 205 85% 78%;
+    --primary-foreground: 205 85% 18%;
+    --secondary: 205 30% 25%;
+    --secondary-foreground: 205 30% 85%;
+    --accent: 207 95% 23%;
+    --accent-foreground: 207 95% 83%;
+    --destructive: 8 91% 59%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 205 85% 78%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 208 95% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-family: "Barlow", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+}
+h3 {
+  color: hsl(var(--card-foreground));
+  font-family: "Barlow", sans-serif;
+}
+p {
+  color: hsl(var(--muted-foreground));
+}
+.button {
+  padding: 0.7rem 1.2rem;
+  background-color: hsl(var(--background));
+  color: hsl(var(--accentforeground));
+  border: 1px solid hsl(var(--input));
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 1rem;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+.button:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accentforeground));
+  border-radius: var();
+  border: 1px solid hsl(var(--input));
+}
+
+.cta {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+span {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  padding: 0px 5px;
+  padding-bottom: 1px;
+  border-radius: 4px;
+}
