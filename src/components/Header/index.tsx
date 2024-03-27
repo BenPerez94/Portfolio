@@ -1,6 +1,10 @@
 import Link from "next/link";
 import malt from "../../../public/malt.png";
+import github from "../../../public/github-mark.png";
+import linkedin from "../../../public/linkedin.png";
+import instagram from "../../../public/instagram.png";
 import Image from "next/image";
+import { Mail } from "lucide-react";
 
 const Header = () => {
   return (
@@ -14,14 +18,24 @@ const Header = () => {
           target="_blank"
           className="px-4"
         >
-          <i className="fa-brands fa-github"></i>
+          <Image
+            src={github}
+            alt=""
+            width={20}
+            className="inline-block mt-[-2px]"
+          />
         </Link>
         <Link
           href="https://www.linkedin.com/in/benjaminperez2/"
           target="_blank"
           className="px-4"
         >
-          <i className="fa-brands fa-linkedin"></i>
+          <Image
+            src={linkedin}
+            alt=""
+            width={18}
+            className="inline-block mt-[-2px]"
+          />
         </Link>
 
         <Link
@@ -29,7 +43,12 @@ const Header = () => {
           target="_blank"
           className="px-4"
         >
-          <i className="fa-brands fa-instagram"></i>
+          <Image
+            src={instagram}
+            alt=""
+            width={18}
+            className="inline-block mt-[-2px]"
+          />
         </Link>
         <Link
           href="https://www.malt.fr/profile/benjaminperez2"
@@ -44,7 +63,7 @@ const Header = () => {
           />
         </Link>
         <Link href="mailto:benjamin.perez@outlook.fr" className="px-4">
-          <i className="fa-solid fa-envelope"></i>
+          <Mail className="inline mt-[-3px]" size="22px" />
         </Link>
       </div>
     </header>

@@ -82,7 +82,7 @@ export const Projects: React.FC = () => {
     <div className="max-w-5xl px-4 m-auto">
       <h2 className="mt-8 mb-2 text-4xl font-medium">Mes projets</h2>
       <p>{describeProjects}</p>
-      <div className="flex flex-col justify-around my-8 md:gap-4 gap-2 md:flex-row grow">
+      <div className="flex flex-col justify-around my-2md:gap-4 gap-2 md:flex-row grow">
         {data?.map((repository) => (
           <Project
             key={repository.name}

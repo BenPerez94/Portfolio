@@ -22,6 +22,7 @@ export const Skills = () => {
             width={63}
             height={63}
             className="m-auto my-[11px]"
+            style={{ width: "auto" }}
           />
           <p className="text-lg text-white">Tailwind</p>
         </div>
@@ -72,6 +73,7 @@ export const Skills = () => {
             width={63}
             height={63}
             className="m-auto my-1"
+            style={{ width: "auto" }}
           />
           <p className="text-lg text-white">Figma</p>
         </div>

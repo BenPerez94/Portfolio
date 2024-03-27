@@ -23,16 +23,19 @@ const Project: React.FC<ProjectProps> = ({ project, description, url }) => {
   return (
     <div className="p-5 border-2 flex md:flex-col flex-row bg-[hsl(var(--card))] border-[hsl(var(--border))] rounded-md md:my-8">
       <Image
+        priority={true}
         src={projectImage}
         alt="picture"
         width={250}
         height={250}
-        className="h-40 object-cover mb-3 rounded-sm mr-6 md:mr-0"
+        placeholder="empty"
+        className="h-40 w-62 object-cover mb-3 rounded-sm mr-6 md:mr-0"
+        style={{ width: "auto" }}
       />
       <div>
         <h3 className="mb-4 text-2xl font-medium">{project}</h3>
         <p className="mb-6">{description}</p>
-        <Link href={url} className="float-right">
+        <Link href={url} target="_blank" className="float-right">
           En savoir plus...
         </Link>
       </div>
